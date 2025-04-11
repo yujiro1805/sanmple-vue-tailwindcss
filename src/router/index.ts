@@ -6,15 +6,14 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'mynumber-reception',
+      name: 'MynumberReception',
       component: MynumberReception,
     },
-    {
-      path: '/about',
-      name: 'about',
-      component: () => import('../views/AboutView.vue'),
-    },
+    // 他のルート
   ],
+  scrollBehavior() {
+    return { top: 0 }
+  },
 })
 
 export default router
