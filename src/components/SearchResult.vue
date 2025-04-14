@@ -63,7 +63,7 @@ const data = ref<Row[]>(
     id: i + 1,
     date: '2024/12/31',
     time: '12:00:00',
-    fullName: 'ヨボク タロウ\n予防 太郎',
+    fullName: 'ヨボウ タロウ\n予防 太郎',
     birthDate: '2000/01/01',
     age: '11歳11か月\n11週1日',
     gender: '男',

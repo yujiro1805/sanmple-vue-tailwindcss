@@ -1,6 +1,6 @@
 <template>
-  <div class="p-8 max-w-4xl mx-auto bg-white shadow-md rounded-lg">
-    <h2 class="text-2xl font-semibold mb-6 border-b pb-2">マイナンバーカードの受付</h2>
+  <div class="p-8 max-w-4xl mx-auto bg-white border-gray-300 rounded-lg">
+    <h1 class="text-2xl mb-6 border-b pb-2">検索条件</h1>
     <form @submit.prevent="search" class="space-y-6">
       <!-- 受付日 -->
       <div>
@@ -8,21 +8,20 @@
           受付日 <span class="text-red-500">※必須</span>
         </label>
         <div class="flex items-center space-x-2">
-          <input
-            type="date"
-            v-model="form.startDate"
-            class="border rounded px-3 py-2 w-1/3 text-sm"
-          />
-          <span>〜</span>
-          <input
-            type="date"
-            v-model="form.endDate"
-            class="border rounded px-3 py-2 w-1/3 text-sm"
-          />
+          <input type="date" v-model="form.endDate" class="border rounded px-3 py-2 w-1/3" />
           <button
             type="button"
             @click="setToday"
-            class="ml-2 px-3 py-2 text-sm text-blue-600 border border-blue-600 rounded hover:bg-blue-50"
+            class="border rounded px-3 py-2 w-1/5 border-blue-600 rounded hover:bg-blue-50 text-blue-500"
+          >
+            今日の日付
+          </button>
+          <span>〜</span>
+          <input type="date" v-model="form.endDate" class="border rounded px-3 py-2 w-1/3" />
+          <button
+            type="button"
+            @click="setToday"
+            class="border rounded px-3 py-2 w-1/5 border-blue-600 rounded hover:bg-blue-50 text-blue-500"
           >
             今日の日付
           </button>
